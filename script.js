@@ -11,7 +11,7 @@ function writePassword() {
     if (passwordLength >= 8 && passwordLength <= 128){
        var1 = passwordLength
     } else {
-      alert("please enter a number 1-128")
+      alert("please enter a number 8-128")
       return;
     }
     var lCase = prompt("Do you want to include lower case letters?", "yes or no");
@@ -77,6 +77,9 @@ function writePassword() {
     else if (var2 == Boolean(true) && var3 == Boolean(true) && var4 == Boolean(true) && var5 == Boolean(false)){
       var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     }
+    else if (var2 == Boolean(true) && var3 == Boolean(true) && var4 == Boolean(false) && var5 == Boolean(false)){
+      var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    }
     else if (var2 == Boolean(false) && var3 == Boolean(true) && var4 == Boolean(false) && var5 == Boolean(false)){
       var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
@@ -88,6 +91,12 @@ function writePassword() {
     }
     else if (var2 == Boolean(false) && var3 == Boolean(false) && var4 == Boolean(true) && var5 == Boolean(false)){
       var str = "0123456789";
+    }
+    else if (var2 == Boolean(true) && var3 == Boolean(false) && var4 == Boolean(true) && var5 == Boolean(false)){
+      var str = "abcdefghijklmnopqrstuvwxyz0123456789";
+    }
+    else if (var2 == Boolean(true) && var3 == Boolean(true) && var4 == Boolean(false) && var5 == Boolean(true)){
+      var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
     }
     for (i = 1; i <= var1; i++) { 
       var char = Math.floor(Math.random() 
